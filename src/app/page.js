@@ -39,20 +39,21 @@ export default function Home() {
           <AiFillLinkedin/>
         </div>
       </section>
+
       <section className="min-h-screen">
         <div className="m-3.5 w-70">
-            <Image className="rounded-full mt-5 max-w-xl float-right" src={tute}/>
+            <Image className="min-w-0 max-w-sm rounded-full mt-5 w-2/5 float-right" src={tute}/>
             <div>
-              <h2 className="text-5xl py-10 text-teal-500 font-bold">About me</h2>
-              <p className="py-10 leading-8 text-gray-800 dark:text-gray-200 max-w-xl md:text-xl float-left">
+              <h2 className="w-3/5 text-5xl py-10 text-teal-500 font-bold">About me</h2>
+              <p className="w-3/5 py-10 leading-8 text-gray-800 dark:text-gray-200 max-w-xl md:text-xl float-left">
               Blockchain enthusiast lorem impsum 
               lorem impsum lorem impsum lorem impsum 
               lorem impsum lorem impsum lorem impsum  
               </p>
             </div>
         </div>
-
       </section>
+      
       <section className="bg-red-700 min-h-screen">
         <div >
            
