@@ -26,8 +26,5 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@font-face {
-  font-family: "burtons";
-  src: url("../../public/Burtons.otf");
-}
+
 
