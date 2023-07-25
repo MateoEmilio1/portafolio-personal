@@ -104,7 +104,7 @@ export default function Home() {
       <section className="grid gap-8 min-h-screen md:grid-cols-2 py-52 text-center md:text-center">
 
       {/* Hacer en este div el Slider */}  
-      <div className="sm:items-center bg-white">
+      <div className="sm:items-center">
         {/* <Image className="xl:max-h-fit md:float-right  rounded-full border-8 shadow-2xl" src={charla1}/> */}
 
       <Swiper 
@@ -124,21 +124,22 @@ export default function Home() {
         modifier: 2.5,
         slideShadows: false,
       }}
+      roundLengths={true}
       >
         <SwiperSlide>
-          <Image className="xl:max-h-fit md:float-right  rounded-md border-2 shadow-2xl" src={charla1}/>
+          <Image className="xl:max-h-fit md:float-right rounded" src={charla1}/>
         </SwiperSlide>
 
         <SwiperSlide>
-          <Image className="xl:max-h-fit md:float-right  rounded-md border-2 shadow-2xl" src={charla2}/>
+          <Image className="xl:max-h-fit md:float-right rounded" src={charla2}/>
         </SwiperSlide>
 
         <SwiperSlide>
-          <Image className="xl:max-h-fit md:float-right  rounded-md border-2 shadow-2xl" src={charla3}/>
+          <Image className="xl:max-h-fit md:float-right rounded" src={charla3}/>
         </SwiperSlide>
 
         <SwiperSlide>
-          <Image className="xl:max-h-fit md:float-right  rounded-md border-2 shadow-2xl" src={charla4}/>
+          <Image className="xl:max-h-fit md:float-right rounded" src={charla4}/>
         </SwiperSlide>
 
         
