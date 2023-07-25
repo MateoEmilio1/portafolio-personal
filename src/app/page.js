@@ -24,7 +24,7 @@ export default function Home() {
   return (
     
 
-    <main className="bg-white px-10 relative w-full h-screen overflow-auto snap-y snap-mandatory">
+    <main className="bg-white px-10 relative w-full h-screen overflow-auto snap-y snap-proximity">
 
     {/* SECTOR PRINCIPAL */}
       <div className="snap-start">
