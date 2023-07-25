@@ -24,10 +24,10 @@ export default function Home() {
   return (
     
 
-    <main className="bg-white px-10 relative lg:w-full lg:h-screen lg:overflow-auto lg:snap-y lg:snap-mandatory">
+    <main className="bg-white px-10">
 
     {/* SECTOR PRINCIPAL */}
-      <div className="lg:snap-start">
+      
       <section className="min-h-screen">
         <nav className="py-10 mb-12 flex justify-between" >
           <h1 className="text-xl font-burtons">poner algo aca?</h1>
@@ -74,11 +74,10 @@ export default function Home() {
           
         </div>
       </section>
-      </div>
-
+      
       {/* SECTOR ABOUT ME */}
 
-      <div className="lg:snap-start">
+      
       <section className="grid gap-8 min-h-screen md:grid-cols-2 text-center md:text-left">
 
         <div className="py-20 text-black">
@@ -97,11 +96,11 @@ export default function Home() {
         </div>
         
       </section>
-      </div>
+      
 
       {/* SECTOR COMUNICACION + CARRUSEL */}
 
-      <div className="lg:snap-start">
+      
       <section className="grid gap-8 min-h-screen md:grid-cols-2 py-52 text-center md:text-center">
 
       {/* Hacer en este div el Slider */}  
@@ -164,7 +163,7 @@ export default function Home() {
         
 
       </section>
-      </div>
+     
     </main>
   
   )
