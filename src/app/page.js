@@ -2,23 +2,25 @@
 import Head from 'next/head';
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillTwitterCircle, AiFillLinkedin} from "react-icons/ai";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+// Imagenes
 import Image from 'next/image';
 import tute from '../../public/tutedev.png';
-import charla1 from '../../public/charla1.jpg';
-import charla2 from '../../public/charla1.jpg';
-import charla3 from '../../public/charla1.jpg';
-import charla4 from '../../public/charla1.jpg';
-import charla5 from '../../public/charla1.jpg';
+import charla1 from '../../public/charla1.png';
+import charla2 from '../../public/charla2.png';
+import charla3 from '../../public/charla3.png';
+import charla4 from '../../public/charla4.png';
+// Swiper
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import {EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+
 
 
 
 export default function Home() {
+
   return (
     
 
@@ -71,24 +73,63 @@ export default function Home() {
         </div>
 
         <div className="sm:items-center">
-          <Image className="xl:max-h-fit md:float-right  rounded-full border-8 shadow-2xl" src={tute}/>
+          <Image className="xl:max-h-fit md:float-right  rounded-lg border-2 shadow-2xl" src={tute}/>
         </div>
         
       </section>
 
       {/* SECTOR COMUNICACION + CARRUSEL */}
 
-      <section className="grid gap-8 md:grid-cols-2 text-center md:text-center">
+      <section className="grid gap-8 min-h-screen md:grid-cols-2  text-center md:text-center">
 
       {/* Hacer en este div el Slider */}  
-      <div className="sm:items-center">
-        <Image className="xl:max-h-fit md:float-right  rounded-full border-8 shadow-2xl" src={charla1}/>
+      <div className="sm:items-center bg-white">
+        {/* <Image className="xl:max-h-fit md:float-right  rounded-full border-8 shadow-2xl" src={charla1}/> */}
+
+      <Swiper 
+      slidesPerView={'auto'}
+      spaceBetween={0}
+      loop={true}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[EffectCoverflow, Pagination, Navigation]}
+      className="mySwiper"
+      coverflowEffect={{
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2.5,
+        slideShadows: false,
+      }}
+      >
+        <SwiperSlide>
+          <Image className="xl:max-h-fit md:float-right  rounded-md border-2 shadow-2xl" src={charla1}/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Image className="xl:max-h-fit md:float-right  rounded-md border-2 shadow-2xl" src={charla2}/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Image className="xl:max-h-fit md:float-right  rounded-md border-2 shadow-2xl" src={charla3}/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Image className="xl:max-h-fit md:float-right  rounded-md border-2 shadow-2xl" src={charla4}/>
+        </SwiperSlide>
+
+        
+
+      </Swiper>
+
       </div> 
       
       
 
-      <div className="py-10 text-black">
-        <h2 className="text-5xl font-bold">Communication</h2>
+      <div className="py-1s text-black">
+        <h2 className="text-4xl font-bold">Communication</h2>
         <p className="text-xl py-10 leading-8">
             Charla topic bla bla bla lorem impsum 
             lorem impsum lorem impsum lorem impsum 
