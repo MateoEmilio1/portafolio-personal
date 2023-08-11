@@ -103,7 +103,7 @@ export default function Home() {
       
       <section className="grid gap-8 min-h-screen md:grid-cols-2 py-52 text-center md:text-center">
 
-      {/* Hacer en este div el Slider */}  
+      {/* Hacer en este div el Slider. */}  
       <div className="sm:items-center">
         {/* <Image className="xl:max-h-fit md:float-right  rounded-full border-8 shadow-2xl" src={charla1}/> */}
 
