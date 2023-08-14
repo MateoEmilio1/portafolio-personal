@@ -1,7 +1,6 @@
 'use client'  
 import Head from 'next/head';
-import {BsFillMoonStarsFill} from 'react-icons/bs';
-import {AiFillTwitterCircle, AiFillLinkedin, AiFillGithub} from "react-icons/ai";
+import {AiFillLinkedin, AiFillGithub} from "react-icons/ai";
 // Imagenes
 import Image from 'next/image';
 import tute from '../../public/tutedev.png';
@@ -9,6 +8,11 @@ import charla1 from '../../public/charla1.png';
 import charla2 from '../../public/charla2.png';
 import charla3 from '../../public/charla3.png';
 import charla4 from '../../public/charla4.png';
+import sun from '../../public/Sun.svg';
+import moon from '../../public/Moon.svg';
+//DarkMode
+import { ThemeProvider, useTheme} from 'next-themes';
+import { useState,useEffect } from 'react';
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -17,24 +21,29 @@ import 'swiper/css/navigation';
 import {EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 
-
-
-export default function Home() {
+export default function Home({ Component, pageProps }) {
+ 
+  const changeDarkMode = () => {
+      document.documentElement.classList.toggle("dark");
+  };
 
   return (
     
-
-    <main className="bg-white px-10">
+    <main className="bg-white px-10 dark:bg-slate-900">
 
     {/* SECTOR PRINCIPAL */}
       
       <section className="min-h-screen">
         <nav className="py-10 mb-12 flex justify-between" >
           <h1 className="text-xl font-burtons">poner algo aca?</h1>
-          <ul className="flex items-right"> 
-            <li>
-              <BsFillMoonStarsFill className="cursor-pointer text-2xl"/>
-            </li>
+
+          <ul className="flex items-right">
+          {/* DARK THEME */}
+
+            <button className="bg-gray-700 text-white rounded-xl py-3 px-4" onClick={changeDarkMode} >
+              Dia/Noche
+            </button>
+
             <li>
               <a 
               className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" 
@@ -59,7 +68,6 @@ export default function Home() {
         </div>
 
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-        {/* href="www.linkedin.com/in/mateo-emilio-0ab656215" */}
           <a href="https://linkedin.com/in/MateoEmilio1"
           rel="noopener noreferrer"
           target="_blank">
