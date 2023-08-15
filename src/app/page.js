@@ -34,11 +34,9 @@ export default function Home({ Component, pageProps }) {
     {/* SECTOR PRINCIPAL */}
       
       <section className="min-h-screen">
-        <nav className="py-10 mb-12 flex justify-between" >
+        <nav className="py-10 mb-12 flex justify-center sm:justify-end" >
 
-          <h1 className="text-xl font-burtons"></h1>
-
-          <ul className="flex items-right">
+          <ul className="flex items-center sm:items-right">
        
 
             <li>
