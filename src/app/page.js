@@ -97,7 +97,7 @@ export default function Home({ Component, pageProps }) {
           Advanced systems engineering student at UTN FRRO, 
           I began my career path within the tech world in the Aurora Latam community (L2 of NEAR Protocol) 
           doing research and teaching the foundations of the blockchain world through courses and talks, 
-          where I had the opportunity to travel to Lima, Peru on behalf of Aurora. 
+          there I had the opportunity to travel to Lima, Peru on behalf of Aurora. 
           After almost 1 year I made the decision to move forward on my path and 
           today I am lucky to be currently working as a Developer at SEED Latam, 
           the largest community in Latin America of the Ethereum blockchain.  
