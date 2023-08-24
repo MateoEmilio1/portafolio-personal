@@ -101,6 +101,8 @@ export default function Home({ Component, pageProps }) {
           After almost 1 year I made the decision to move forward on my path and 
           today I am lucky to be currently working as a Developer at SEED Latam, 
           the largest community in Latin America of the Ethereum blockchain.  
+
+          PD: I love trekking!
           </p>
         </div>
 
