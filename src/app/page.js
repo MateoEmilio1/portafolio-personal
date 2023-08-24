@@ -64,9 +64,9 @@ export default function Home({ Component, pageProps }) {
           <h3 className="text-2xl py-2 font-semibold dark:text-white">Systems engineering student</h3>
           <h3 className="text-xl py-2 font-semibold dark:text-white">Junior Developer</h3>
           <p className="text-md py-5 leading-8 text-gray-800 max-w-xl mx-auto md:text-xl dark:text-white">
-          Blockchain enthusiast lorem impsum 
-          lorem impsum lorem impsum lorem impsum 
-          lorem impsum lorem impsum lorem impsum  
+          Enthusiastic about blockchain technology and programming, 
+          studying and learning every day what I am passionate about, 
+          read more about me below!  
           </p>
         </div>
 
@@ -94,11 +94,13 @@ export default function Home({ Component, pageProps }) {
         <div className="py-20 text-black dark:text-white">
           <h2 className="text-5xl font-bold e">About me</h2>
           <p className="text-xl py-10 leading-8 ">
-            Blockchain enthusiast lorem impsum 
-            lorem impsum lorem impsum lorem impsum 
-            lorem impsum lorem impsum lorem impsum
-            lorem impsum lorem impsum lorem impsum
-            lorem impsum lorem impsum lorem impsum  
+          Advanced systems engineering student at UTN FRRO, 
+          I began my career path within the tech world in the Aurora Latam community (L2 of NEAR Protocol) 
+          doing research and teaching the foundations of the blockchain world through courses and talks, 
+          where I had the opportunity to travel to Lima, Peru on behalf of Aurora. 
+          After almost 1 year I made the decision to move forward on my path and 
+          today I am lucky to be currently working as a Developer at SEED Latam, 
+          the largest community in Latin America of the Ethereum blockchain.  
           </p>
         </div>
 
