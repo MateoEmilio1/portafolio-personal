@@ -64,7 +64,7 @@ export default function Home({ Component, pageProps }) {
           <h3 className="text-2xl py-2 font-semibold dark:text-white">Systems engineering student</h3>
           <h3 className="text-xl py-2 font-semibold dark:text-white">Junior Developer</h3>
           <p className="text-md py-5 leading-8 text-gray-800 max-w-xl mx-auto md:text-xl dark:text-white">
-          Enthusiastic about blockchain technology and programming, 
+          Blockchain Enthusiast and coding passionate, 
           studying and learning every day what I am passionate about, 
           read more about me below!  
           </p>
