@@ -166,26 +166,56 @@ export default function Home({ Component, pageProps }) {
             </SwiperSlide>
 
             {/* slide 2 */}
-            <SwiperSlide>
-              <Image
-                className="xl:max-h-fit md:float-right rounded"
-                src={charla2}
-              />
+            <SwiperSlide onClick={() => window.my_modal_2.showModal()}>
+              <a
+                className="cursor-pointer"
+                onClick={() => window.my_modal_2.showModal()}
+              >
+                <div>
+                  <Image
+                    className="xl:max-h-fit md:float-right rounded"
+                    src={charla2}
+              
+                    onClick={() => window.my_modal_2.showModal()}
+                  ></Image>
+                </div>
+              </a>
             </SwiperSlide>
 
-            <SwiperSlide>
-              <Image
-                className="xl:max-h-fit md:float-right rounded"
-                src={charla3}
-              />
+            {/* slide 3 */}
+            <SwiperSlide onClick={() => window.my_modal_3.showModal()}>
+              <a
+                className="cursor-pointer"
+                onClick={() => window.my_modal_3.showModal()}
+              >
+                <div>
+                  <Image
+                    className="xl:max-h-fit md:float-right rounded"
+                    src={charla3}
+              
+                    onClick={() => window.my_modal_3.showModal()}
+                  ></Image>
+                </div>
+              </a>
             </SwiperSlide>
 
-            <SwiperSlide>
-              <Image
-                className="xl:max-h-fit md:float-right rounded"
-                src={charla4}
-              />
+            {/* slide 4 */}
+            <SwiperSlide onClick={() => window.my_modal_4.showModal()}>
+              <a
+                className="cursor-pointer"
+                onClick={() => window.my_modal_4.showModal()}
+              >
+                <div>
+                  <Image
+                    className="xl:max-h-fit md:float-right rounded"
+                    src={charla4}
+              
+                    onClick={() => window.my_modal_4.showModal()}
+                  ></Image>
+                </div>
+              </a>
             </SwiperSlide>
+
           </Swiper>
 
           {/* Modals */}
@@ -230,7 +260,135 @@ export default function Home({ Component, pageProps }) {
             close
             </button>
           </form>
-        </dialog>
+          </dialog>
+
+          {/* modal 2 */}
+          <dialog id="my_modal_2" className="modal rounded-3xl justify-center">
+          <form method="dialog" className="modal-box">
+            <div className={styles.headerModal}>
+              {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
+                ✕
+              </button> */}
+            </div>
+            <div className="px-8">
+              <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim a leo pulvinar rhoncus. 
+              Maecenas risus mauris, interdum eu justo vitae, iaculis scelerisque magna. Vivamus eu tincidunt augue. Sed eleifend eu lacus id porttitor. 
+              Proin lorem risus, mollis nec orci et, tincidunt posuere arcu. Vivamus non libero lacinia, ornare sem sed, mattis lorem. 
+              Vivamus sed congue neque, non consectetur lectus. Donec ultrices, ante quis maximus dignissim, 
+              massa nisl auctor quam, quis molestie turpis odio a urna. Vivamus at libero malesuada, suscipit mauris eget, faucibus arcu. 
+              Ut non lorem vel nibh vehicula eleifend sit amet ornare massa.
+              </p>
+              <div className="flex md:justify-center gap-2">
+                <div>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://twitter.com/0xRoschain"
+                  >
+                    <Image 
+                    className="object-contain xl:max-w-5xl md:float-right rounded-lg" 
+                    alt="Logo" 
+                    src={charla2}>
+                    </Image>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form method="dialog" className="modal-backdrop">
+            <button 
+            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
+            close
+            </button>
+          </form>
+          </dialog>
+
+          {/* modal 3 */}
+          <dialog id="my_modal_3" className="modal rounded-3xl justify-center">
+          <form method="dialog" className="modal-box">
+            <div className={styles.headerModal}>
+              {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
+                ✕
+              </button> */}
+            </div>
+            <div className="px-8">
+              <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim a leo pulvinar rhoncus. 
+              Maecenas risus mauris, interdum eu justo vitae, iaculis scelerisque magna. Vivamus eu tincidunt augue. Sed eleifend eu lacus id porttitor. 
+              Proin lorem risus, mollis nec orci et, tincidunt posuere arcu. Vivamus non libero lacinia, ornare sem sed, mattis lorem. 
+              Vivamus sed congue neque, non consectetur lectus. Donec ultrices, ante quis maximus dignissim, 
+              massa nisl auctor quam, quis molestie turpis odio a urna. Vivamus at libero malesuada, suscipit mauris eget, faucibus arcu. 
+              Ut non lorem vel nibh vehicula eleifend sit amet ornare massa.
+              </p>
+              <div className="flex md:justify-center gap-2">
+                <div>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://twitter.com/0xRoschain"
+                  >
+                    <Image 
+                    className="object-contain xl:max-w-5xl md:float-right rounded-lg" 
+                    alt="Logo" 
+                    src={charla3}>
+                    </Image>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form method="dialog" className="modal-backdrop">
+            <button 
+            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
+            close
+            </button>
+          </form>
+          </dialog>
+          
+          {/* modal 4 */}
+          <dialog id="my_modal_4" className="modal rounded-3xl justify-center">
+          <form method="dialog" className="modal-box">
+            <div className={styles.headerModal}>
+              {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
+                ✕
+              </button> */}
+            </div>
+            <div className="px-8">
+              <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim a leo pulvinar rhoncus. 
+              Maecenas risus mauris, interdum eu justo vitae, iaculis scelerisque magna. Vivamus eu tincidunt augue. Sed eleifend eu lacus id porttitor. 
+              Proin lorem risus, mollis nec orci et, tincidunt posuere arcu. Vivamus non libero lacinia, ornare sem sed, mattis lorem. 
+              Vivamus sed congue neque, non consectetur lectus. Donec ultrices, ante quis maximus dignissim, 
+              massa nisl auctor quam, quis molestie turpis odio a urna. Vivamus at libero malesuada, suscipit mauris eget, faucibus arcu. 
+              Ut non lorem vel nibh vehicula eleifend sit amet ornare massa.
+              </p>
+              <div className="flex md:justify-center gap-2">
+                <div>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://twitter.com/0xRoschain"
+                  >
+                    <Image 
+                    className="object-contain xl:max-w-5xl md:float-right rounded-lg" 
+                    alt="Logo" 
+                    src={charla4}>
+                    </Image>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form method="dialog" className="modal-backdrop">
+            <button 
+            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
+            close
+            </button>
+          </form>
+          </dialog>
+
+
 
         </div>
 
