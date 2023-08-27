@@ -237,9 +237,7 @@ export default function Home({ Component, pageProps }) {
         <div className="py-1s text-black dark:text-white">
           <h2 className="text-4xl font-bold">Communication</h2>
           <p className="text-xl py-10 leading-8">
-            Charla topic bla bla bla lorem impsum lorem impsum lorem impsum
-            lorem impsum lorem impsum lorem impsum lorem impsum lorem impsum
-            lorem impsum lorem impsum lorem impsum lorem impsum lorem impsum
+          In this section you can see the different talks/presentations which I had the opportunity to lead
           </p>
         </div>
       </section>
