@@ -79,6 +79,7 @@ export default function Home({ Component, pageProps }) {
             href="https://linkedin.com/in/MateoEmilio1"
             rel="noopener noreferrer"
             target="_blank"
+            className="transition-all hover:scale-125"
           >
             <AiFillLinkedin />
           </a>
@@ -87,6 +88,7 @@ export default function Home({ Component, pageProps }) {
             href="https://github.com/MateoEmilio1"
             rel="noopener noreferrer"
             target="_blank"
+            className="transition-all hover:scale-125"
           >
             <AiFillGithub />
           </a>
@@ -123,7 +125,7 @@ export default function Home({ Component, pageProps }) {
 
       <section className="grid gap-8 min-h-screen md:grid-cols-2 py-52 text-center md:text-center">
         {/* Hacer en este div el Slider. */}
-        <div className="sm:items-center">
+        <div id="Page" className="sm:items-center">
           {/* <Image className="xl:max-h-fit md:float-right  rounded-full border-8 shadow-2xl" src={charla1}/> */}
 
           <Swiper
@@ -132,10 +134,11 @@ export default function Home({ Component, pageProps }) {
             loop={true}
             pagination={{
               clickable: true,
+              type: "bullets",
             }}
             navigation={true}
             modules={[EffectCoverflow, Pagination, Navigation]}
-            className="mySwiper"
+            className="carruselOfTute"
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
@@ -143,7 +146,6 @@ export default function Home({ Component, pageProps }) {
               modifier: 2.5,
               slideShadows: false,
             }}
-            roundLengths={true}
           >
 
             {/* slide 1 */}
@@ -189,15 +191,15 @@ export default function Home({ Component, pageProps }) {
           {/* Modals */}
 
           {/* modal 1 */}
-          <dialog id="my_modal_1" className="modal rounded-3xl">
+          <dialog id="my_modal_1" className="modal rounded-3xl justify-center">
           <form method="dialog" className="modal-box">
             <div className={styles.headerModal}>
               {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
                 ✕
               </button> */}
             </div>
-            <div className="px-36 ">
-              <p className="py-4 text-lg">
+            <div className="px-8">
+              <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
                 Charla con la comunidad de RosChain "Bases de Solidity", donde vimos una introduccion
                 a la sintaxis del lenguaje para despues deployar un smart contract en testnet!.
                 Pero, ¿Que es Roschain? Es una comunidad en español que se dedica a la educación y
@@ -213,7 +215,7 @@ export default function Home({ Component, pageProps }) {
                     href="https://twitter.com/0xRoschain"
                   >
                     <Image 
-                    className="xl:max-h-fit md:float-right rounded-lg" 
+                    className="object-contain xl:max-w-5xl md:float-right rounded-lg" 
                     alt="Logo" 
                     src={charla1}>
                     </Image>
@@ -223,7 +225,8 @@ export default function Home({ Component, pageProps }) {
             </div>
           </form>
           <form method="dialog" className="modal-backdrop">
-            <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md ml-8">
+            <button 
+            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
             close
             </button>
           </form>
