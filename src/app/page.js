@@ -4,6 +4,7 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 // Imagenes
 import Image from "next/image";
 import tute from "../../public/tutedev.png";
+import tute2 from "../../public/tutedev2.png";
 import charla1 from "../../public/charla1.png";
 import charla2 from "../../public/charla2.png";
 import charla3 from "../../public/charla3.png";
@@ -114,9 +115,15 @@ export default function Home({ Component, pageProps }) {
         </div>
 
         <div className="sm:items-center py-20">
+          {/* Desktop */}
           <Image
-            className="xl:max-h-fit md:float-right  rounded-lg border-2 shadow-2xl"
+            className="hidden md:block xl:max-h-fit md:float-right rounded-lg border-2 shadow-2xl"
             src={tute}
+          />
+          {/* Responsive */}
+          <Image
+            className="md:hidden xl:max-h-fit md:float-right rounded-lg border-2 shadow-2xl"
+            src={tute2}
           />
         </div>
       </section>
@@ -221,7 +228,7 @@ export default function Home({ Component, pageProps }) {
           {/* Modals */}
 
           {/* modal 1 */}
-          <dialog id="my_modal_1" className="modal rounded-3xl justify-center">
+          <dialog id="my_modal_1" className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white">
           <form method="dialog" className="modal-box">
             <div className={styles.headerModal}>
               {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
@@ -254,6 +261,8 @@ export default function Home({ Component, pageProps }) {
               </div>
             </div>
           </form>
+
+          
           <form method="dialog" className="modal-backdrop">
             <button 
             className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
@@ -263,7 +272,7 @@ export default function Home({ Component, pageProps }) {
           </dialog>
 
           {/* modal 2 */}
-          <dialog id="my_modal_2" className="modal rounded-3xl justify-center">
+          <dialog id="my_modal_2" className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white">
           <form method="dialog" className="modal-box">
             <div className={styles.headerModal}>
               {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
@@ -305,7 +314,7 @@ export default function Home({ Component, pageProps }) {
           </dialog>
 
           {/* modal 3 */}
-          <dialog id="my_modal_3" className="modal rounded-3xl justify-center">
+          <dialog id="my_modal_3" className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white">
           <form method="dialog" className="modal-box">
             <div className={styles.headerModal}>
               {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
@@ -347,7 +356,7 @@ export default function Home({ Component, pageProps }) {
           </dialog>
           
           {/* modal 4 */}
-          <dialog id="my_modal_4" className="modal rounded-3xl justify-center">
+          <dialog id="my_modal_4" className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white">
           <form method="dialog" className="modal-box">
             <div className={styles.headerModal}>
               {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
