@@ -11,6 +11,10 @@ import charla3 from "../../public/charla3.png";
 import charla4 from "../../public/charla4.png";
 import sun from "../../public/Sun.svg";
 import moon from "../../public/Moon.svg";
+
+//Articulos
+import articulos from "./articulos.js";
+
 //DarkMode
 import { ThemeProvider, useTheme } from "next-themes";
 import { useState, useEffect } from "react";
@@ -24,7 +28,6 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 //CSS
 import styles from "../app/globals.css";
 
-
 export default function Home({ Component, pageProps }) {
   const changeDarkMode = () => {
     document.documentElement.classList.toggle("dark");
@@ -34,7 +37,7 @@ export default function Home({ Component, pageProps }) {
     <main className="bg-white px-10 dark:bg-slate-800">
       {/* SECTOR PRINCIPAL */}
 
-      <section className="min-h-screen">
+      <div className="min-h-screen">
         <nav className="py-10 mb-12 flex justify-center sm:justify-end">
           <ul className="flex items-center sm:items-right">
             <li>
@@ -94,7 +97,7 @@ export default function Home({ Component, pageProps }) {
             <AiFillGithub />
           </a>
         </div>
-      </section>
+      </div>
 
       {/* SECTOR ABOUT ME */}
 
@@ -154,7 +157,6 @@ export default function Home({ Component, pageProps }) {
               slideShadows: false,
             }}
           >
-
             {/* slide 1 */}
             <SwiperSlide onClick={() => window.my_modal_1.showModal()}>
               <a
@@ -165,7 +167,6 @@ export default function Home({ Component, pageProps }) {
                   <Image
                     className="xl:max-h-fit md:float-right rounded"
                     src={charla1}
-              
                     onClick={() => window.my_modal_1.showModal()}
                   ></Image>
                 </div>
@@ -182,7 +183,6 @@ export default function Home({ Component, pageProps }) {
                   <Image
                     className="xl:max-h-fit md:float-right rounded"
                     src={charla2}
-              
                     onClick={() => window.my_modal_2.showModal()}
                   ></Image>
                 </div>
@@ -199,7 +199,6 @@ export default function Home({ Component, pageProps }) {
                   <Image
                     className="xl:max-h-fit md:float-right rounded"
                     src={charla3}
-              
                     onClick={() => window.my_modal_3.showModal()}
                   ></Image>
                 </div>
@@ -216,198 +215,250 @@ export default function Home({ Component, pageProps }) {
                   <Image
                     className="xl:max-h-fit md:float-right rounded"
                     src={charla4}
-              
                     onClick={() => window.my_modal_4.showModal()}
                   ></Image>
                 </div>
               </a>
             </SwiperSlide>
-
           </Swiper>
 
           {/* Modals */}
 
           {/* modal 1 */}
-          <dialog id="my_modal_1" className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white">
-          <form method="dialog" className="modal-box">
-            <div className={styles.headerModal}>
-              {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
+          <dialog
+            id="my_modal_1"
+            className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white"
+          >
+            <form method="dialog" className="modal-box">
+              <div className={styles.headerModal}>
+                {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
                 ✕
               </button> */}
-            </div>
-            <div className="px-8">
-              <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
-                Charla con la comunidad de RosChain "Bases de Solidity", donde vimos una introduccion
-                a la sintaxis del lenguaje para despues deployar un smart contract en testnet!.
-                Pero, ¿Que es Roschain? Es una comunidad en español que se dedica a la educación y
-                adopción de usuarios en el ecosistema Web3 y cripto, bajo los
-                valores de la descentralización. Para obtener más información sobre
-                RosChain y cómo está organizado, haga clic en la imagen.
-              </p>
-              <div className="flex md:justify-center gap-2">
-                <div>
-                  <a
-                    target="_blank"
-                    rel="noopener"
-                    href="https://twitter.com/0xRoschain"
-                  >
-                    <Image 
-                    className="object-contain xl:max-w-5xl md:float-right rounded-lg" 
-                    alt="Logo" 
-                    src={charla1}>
-                    </Image>
-                  </a>
+              </div>
+              <div className="px-8">
+                <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
+                  Charla con la comunidad de RosChain "Bases de Solidity", donde
+                  vimos una introduccion a la sintaxis del lenguaje para despues
+                  deployar un smart contract en testnet!. Pero, ¿Que es
+                  Roschain? Es una comunidad en español que se dedica a la
+                  educación y adopción de usuarios en el ecosistema Web3 y
+                  cripto, bajo los valores de la descentralización. Para obtener
+                  más información sobre RosChain y cómo está organizado, haga
+                  clic en la imagen.
+                </p>
+                <div className="flex md:justify-center gap-2">
+                  <div>
+                    <a
+                      target="_blank"
+                      rel="noopener"
+                      href="https://twitter.com/0xRoschain"
+                    >
+                      <Image
+                        className="object-contain xl:max-w-5xl md:float-right rounded-lg"
+                        alt="Logo"
+                        src={charla1}
+                      ></Image>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
 
-          
-          <form method="dialog" className="modal-backdrop">
-            <button 
-            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
-            close
-            </button>
-          </form>
+            <form method="dialog" className="modal-backdrop">
+              <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
+                close
+              </button>
+            </form>
           </dialog>
 
           {/* modal 2 */}
-          <dialog id="my_modal_2" className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white">
-          <form method="dialog" className="modal-box">
-            <div className={styles.headerModal}>
-              {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
+          <dialog
+            id="my_modal_2"
+            className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white"
+          >
+            <form method="dialog" className="modal-box">
+              <div className={styles.headerModal}>
+                {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
                 ✕
               </button> */}
-            </div>
-            <div className="px-8">
-              <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim a leo pulvinar rhoncus. 
-              Maecenas risus mauris, interdum eu justo vitae, iaculis scelerisque magna. Vivamus eu tincidunt augue. Sed eleifend eu lacus id porttitor. 
-              Proin lorem risus, mollis nec orci et, tincidunt posuere arcu. Vivamus non libero lacinia, ornare sem sed, mattis lorem. 
-              Vivamus sed congue neque, non consectetur lectus. Donec ultrices, ante quis maximus dignissim, 
-              massa nisl auctor quam, quis molestie turpis odio a urna. Vivamus at libero malesuada, suscipit mauris eget, faucibus arcu. 
-              Ut non lorem vel nibh vehicula eleifend sit amet ornare massa.
-              </p>
-              <div className="flex md:justify-center gap-2">
-                <div>
-                  <a
-                    target="_blank"
-                    rel="noopener"
-                    href="https://twitter.com/0xRoschain"
-                  >
-                    <Image 
-                    className="object-contain xl:max-w-5xl md:float-right rounded-lg" 
-                    alt="Logo" 
-                    src={charla2}>
-                    </Image>
-                  </a>
+              </div>
+              <div className="px-8">
+                <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer ut enim a leo pulvinar rhoncus. Maecenas risus mauris,
+                  interdum eu justo vitae, iaculis scelerisque magna. Vivamus eu
+                  tincidunt augue. Sed eleifend eu lacus id porttitor. Proin
+                  lorem risus, mollis nec orci et, tincidunt posuere arcu.
+                  Vivamus non libero lacinia, ornare sem sed, mattis lorem.
+                  Vivamus sed congue neque, non consectetur lectus. Donec
+                  ultrices, ante quis maximus dignissim, massa nisl auctor quam,
+                  quis molestie turpis odio a urna. Vivamus at libero malesuada,
+                  suscipit mauris eget, faucibus arcu. Ut non lorem vel nibh
+                  vehicula eleifend sit amet ornare massa.
+                </p>
+                <div className="flex md:justify-center gap-2">
+                  <div>
+                    <a
+                      target="_blank"
+                      rel="noopener"
+                      href="https://twitter.com/0xRoschain"
+                    >
+                      <Image
+                        className="object-contain xl:max-w-5xl md:float-right rounded-lg"
+                        alt="Logo"
+                        src={charla2}
+                      ></Image>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
-          <form method="dialog" className="modal-backdrop">
-            <button 
-            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
-            close
-            </button>
-          </form>
+            </form>
+            <form method="dialog" className="modal-backdrop">
+              <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
+                close
+              </button>
+            </form>
           </dialog>
 
           {/* modal 3 */}
-          <dialog id="my_modal_3" className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white">
-          <form method="dialog" className="modal-box">
-            <div className={styles.headerModal}>
-              {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
+          <dialog
+            id="my_modal_3"
+            className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white"
+          >
+            <form method="dialog" className="modal-box">
+              <div className={styles.headerModal}>
+                {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
                 ✕
               </button> */}
-            </div>
-            <div className="px-8">
-              <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim a leo pulvinar rhoncus. 
-              Maecenas risus mauris, interdum eu justo vitae, iaculis scelerisque magna. Vivamus eu tincidunt augue. Sed eleifend eu lacus id porttitor. 
-              Proin lorem risus, mollis nec orci et, tincidunt posuere arcu. Vivamus non libero lacinia, ornare sem sed, mattis lorem. 
-              Vivamus sed congue neque, non consectetur lectus. Donec ultrices, ante quis maximus dignissim, 
-              massa nisl auctor quam, quis molestie turpis odio a urna. Vivamus at libero malesuada, suscipit mauris eget, faucibus arcu. 
-              Ut non lorem vel nibh vehicula eleifend sit amet ornare massa.
-              </p>
-              <div className="flex md:justify-center gap-2">
-                <div>
-                  <a
-                    target="_blank"
-                    rel="noopener"
-                    href="https://twitter.com/0xRoschain"
-                  >
-                    <Image 
-                    className="object-contain xl:max-w-5xl md:float-right rounded-lg" 
-                    alt="Logo" 
-                    src={charla3}>
-                    </Image>
-                  </a>
+              </div>
+              <div className="px-8">
+                <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer ut enim a leo pulvinar rhoncus. Maecenas risus mauris,
+                  interdum eu justo vitae, iaculis scelerisque magna. Vivamus eu
+                  tincidunt augue. Sed eleifend eu lacus id porttitor. Proin
+                  lorem risus, mollis nec orci et, tincidunt posuere arcu.
+                  Vivamus non libero lacinia, ornare sem sed, mattis lorem.
+                  Vivamus sed congue neque, non consectetur lectus. Donec
+                  ultrices, ante quis maximus dignissim, massa nisl auctor quam,
+                  quis molestie turpis odio a urna. Vivamus at libero malesuada,
+                  suscipit mauris eget, faucibus arcu. Ut non lorem vel nibh
+                  vehicula eleifend sit amet ornare massa.
+                </p>
+                <div className="flex md:justify-center gap-2">
+                  <div>
+                    <a
+                      target="_blank"
+                      rel="noopener"
+                      href="https://twitter.com/0xRoschain"
+                    >
+                      <Image
+                        className="object-contain xl:max-w-5xl md:float-right rounded-lg"
+                        alt="Logo"
+                        src={charla3}
+                      ></Image>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
-          <form method="dialog" className="modal-backdrop">
-            <button 
-            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
-            close
-            </button>
-          </form>
+            </form>
+            <form method="dialog" className="modal-backdrop">
+              <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
+                close
+              </button>
+            </form>
           </dialog>
-          
+
           {/* modal 4 */}
-          <dialog id="my_modal_4" className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white">
-          <form method="dialog" className="modal-box">
-            <div className={styles.headerModal}>
-              {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
+          <dialog
+            id="my_modal_4"
+            className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white"
+          >
+            <form method="dialog" className="modal-box">
+              <div className={styles.headerModal}>
+                {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
                 ✕
               </button> */}
-            </div>
-            <div className="px-8">
-              <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut enim a leo pulvinar rhoncus. 
-              Maecenas risus mauris, interdum eu justo vitae, iaculis scelerisque magna. Vivamus eu tincidunt augue. Sed eleifend eu lacus id porttitor. 
-              Proin lorem risus, mollis nec orci et, tincidunt posuere arcu. Vivamus non libero lacinia, ornare sem sed, mattis lorem. 
-              Vivamus sed congue neque, non consectetur lectus. Donec ultrices, ante quis maximus dignissim, 
-              massa nisl auctor quam, quis molestie turpis odio a urna. Vivamus at libero malesuada, suscipit mauris eget, faucibus arcu. 
-              Ut non lorem vel nibh vehicula eleifend sit amet ornare massa.
-              </p>
-              <div className="flex md:justify-center gap-2">
-                <div>
-                  <a
-                    target="_blank"
-                    rel="noopener"
-                    href="https://twitter.com/0xRoschain"
-                  >
-                    <Image 
-                    className="object-contain xl:max-w-5xl md:float-right rounded-lg" 
-                    alt="Logo" 
-                    src={charla4}>
-                    </Image>
-                  </a>
+              </div>
+              <div className="px-8">
+                <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer ut enim a leo pulvinar rhoncus. Maecenas risus mauris,
+                  interdum eu justo vitae, iaculis scelerisque magna. Vivamus eu
+                  tincidunt augue. Sed eleifend eu lacus id porttitor. Proin
+                  lorem risus, mollis nec orci et, tincidunt posuere arcu.
+                  Vivamus non libero lacinia, ornare sem sed, mattis lorem.
+                  Vivamus sed congue neque, non consectetur lectus. Donec
+                  ultrices, ante quis maximus dignissim, massa nisl auctor quam,
+                  quis molestie turpis odio a urna. Vivamus at libero malesuada,
+                  suscipit mauris eget, faucibus arcu. Ut non lorem vel nibh
+                  vehicula eleifend sit amet ornare massa.
+                </p>
+                <div className="flex md:justify-center gap-2">
+                  <div>
+                    <a
+                      target="_blank"
+                      rel="noopener"
+                      href="https://twitter.com/0xRoschain"
+                    >
+                      <Image
+                        className="object-contain xl:max-w-5xl md:float-right rounded-lg"
+                        alt="Logo"
+                        src={charla4}
+                      ></Image>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
-          <form method="dialog" className="modal-backdrop">
-            <button 
-            className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
-            close
-            </button>
-          </form>
+            </form>
+            <form method="dialog" className="modal-backdrop">
+              <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
+                close
+              </button>
+            </form>
           </dialog>
-
-
-
         </div>
 
         <div className="py-1s text-black dark:text-white">
           <h2 className="text-4xl font-bold">Communication</h2>
           <p className="text-xl py-10 leading-8">
-          In this section you can see the different talks/presentations which I had the opportunity to lead
+            In this section you can see the different talks/presentations which
+            I had the opportunity to lead
           </p>
         </div>
       </section>
+
+      {/* SECTOR ARTICULOS */}
+
+      <div className="min-h-screen md:grid-cols-2 text-center md:text-left">
+        <div className="pt-20 pb-4 text-black dark:text-white">
+          <h2 className="text-5xl font-bold e">Articulos</h2>
+          <p className="text-xl py-10 leading-8 ">
+            Todos los artículos técnicos en los cuales tuve el
+            gusto de ser parte
+          </p>
+          {/* 
+          english : All the technical and non-technical articles in which I had
+             the pleasure of being part/author of them. */}
+        </div>
+        {/* ARTICULOS */}
+        <div className="grid lg:grid-cols-3 gap-4 py-4s">
+          {/* MAPEA LOS ARTICULOS */}
+          {articulos.map((articulo) => (
+            <div class="max-w-md rounded overflow-hidden shadow-lg dark:bg-slate-500">
+              <a href={articulo.link} rel="noopener noreferrer" target="_blank">
+                <img fill={true} className="w-full" src={articulo.img}></img>
+                <div class="px-6 py-4 text-left">
+                  <h1 className="font-bold dark:text-white">{articulo.title}</h1>
+                  <p class="text-gray-700 text-base dark:text-gray-300">{articulo.text}</p>
+                </div>
+              </a>
+            </div>
+          ))}
+
+          {/* Fin articulos */}
+        </div>
+      </div>
     </main>
   );
 }
