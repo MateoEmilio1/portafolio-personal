@@ -9,6 +9,7 @@ import charla1 from "../../public/charla1.png";
 import charla2 from "../../public/charla2.png";
 import charla3 from "../../public/charla3.png";
 import charla4 from "../../public/charla4.png";
+import charla5 from "../../public/charla5.jpg";
 import sun from "../../public/Sun.svg";
 import moon from "../../public/Moon.svg";
 
@@ -220,6 +221,22 @@ export default function Home({ Component, pageProps }) {
                 </div>
               </a>
             </SwiperSlide>
+
+            {/* slide 5 */}
+            <SwiperSlide onClick={() => window.my_modal_5.showModal()}>
+              <a
+                className="cursor-pointer"
+                onClick={() => window.my_modal_5.showModal()}
+              >
+                <div>
+                  <Image
+                    className="xl:max-h-fit md:float-right rounded"
+                    src={charla5}
+                    onClick={() => window.my_modal_5.showModal()}
+                  ></Image>
+                </div>
+              </a>
+            </SwiperSlide>
           </Swiper>
 
           {/* Modals */}
@@ -239,10 +256,10 @@ export default function Home({ Component, pageProps }) {
                 <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
                   Charla con la comunidad de RosChain "Bases de Solidity", donde
                   vimos una introduccion a la sintaxis del lenguaje para despues
-                  deployar un smart contract en testnet!. Pero, ¿Que es
+                  deployar un smart contract en testnet!. <br/><br/> Pero, ¿Que es
                   Roschain? Es una comunidad en español que se dedica a la
                   educación y adopción de usuarios en el ecosistema Web3 y
-                  cripto, bajo los valores de la descentralización. Para obtener
+                  cripto, bajo los valores de la descentralización. <br/> <br/> Para obtener
                   más información sobre RosChain y cómo está organizado, haga
                   clic en la imagen.
                 </p>
@@ -417,13 +434,56 @@ export default function Home({ Component, pageProps }) {
               </button>
             </form>
           </dialog>
+
+          {/* modal 5 */}
+          <dialog
+            id="my_modal_5"
+            className="modal rounded-3xl justify-center dark:bg-slate-800 dark:text-white"
+          >
+            <form method="dialog" className="modal-box">
+              <div className={styles.headerModal}>
+                {/* <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-1.5 rounded-md ml-8 absolute right-2 top-2">
+                ✕
+              </button> */}
+              </div>
+              <div className="px-8">
+                <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
+                  Workshop sobre como configurar un Nodo de Ethereum utilizando el
+                  software DAppNode desde como bootear el ISO en un pendrive
+                  hasta la conexión local, Tandil (Prov. Bs As).
+                </p>
+                <div className="flex md:justify-center gap-2">
+                  <div>
+                    <a
+                      target="_blank"
+                      rel="noopener"
+                      href="https://mirror.xyz/seedlatam.eth/VpuKM5vy2uWpK-H-MVGcbZaCIlRVoC3iTsASDDXIhTY"
+                    >
+                      <Image
+                        className="object-contain xl:max-w-5xl md:float-right rounded-lg"
+                        alt="Logo"
+                        src={charla5}
+                      ></Image>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <form method="dialog" className="modal-backdrop">
+              <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-2 py-2 my-4 rounded-md">
+                close
+              </button>
+            </form>
+          </dialog>
         </div>
 
         <div className="py-1s text-black dark:text-white">
-          <h2 className="text-4xl font-bold">Communication</h2>
+          <h2 className="text-4xl font-bold">Workshops</h2>
           <p className="text-xl py-10 leading-8">
-            In this section you can see the different talks/presentations which
-            I had the opportunity to lead
+            En este apartado podrás ver las diferentes charlas, presentaciones y talleres (workshops)
+            que tuve la oportunidad de liderar
+            {/* In this section you can see the different talks/presentations which
+            I had the opportunity to lead */}
           </p>
         </div>
       </section>
@@ -434,8 +494,8 @@ export default function Home({ Component, pageProps }) {
         <div className="pt-20 pb-4 text-black dark:text-white">
           <h2 className="text-5xl font-bold e">Articulos</h2>
           <p className="text-xl py-10 leading-8 ">
-            Todos los artículos técnicos en los cuales tuve el
-            gusto de ser parte
+            Todos los artículos técnicos en los cuales tuve el gusto de ser
+            parte
           </p>
           {/* 
           english : All the technical and non-technical articles in which I had
@@ -449,8 +509,12 @@ export default function Home({ Component, pageProps }) {
               <a href={articulo.link} rel="noopener noreferrer" target="_blank">
                 <img fill={true} className="w-full" src={articulo.img}></img>
                 <div class="px-6 py-4 text-left">
-                  <h1 className="font-bold dark:text-white">{articulo.title}</h1>
-                  <p class="text-gray-700 text-base dark:text-gray-300">{articulo.text}</p>
+                  <h1 className="font-bold dark:text-white">
+                    {articulo.title}
+                  </h1>
+                  <p class="text-gray-700 text-base dark:text-gray-300">
+                    {articulo.text}
+                  </p>
                 </div>
               </a>
             </div>
