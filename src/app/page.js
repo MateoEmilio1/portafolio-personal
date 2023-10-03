@@ -5,16 +5,18 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Image from "next/image";
 import tute from "../../public/tutedev.png";
 import tute2 from "../../public/tutedev2.png";
-import charla1 from "../../public/charla1.png";
-import charla2 from "../../public/charla2.png";
-import charla3 from "../../public/charla3.png";
-import charla4 from "../../public/charla4.png";
-import charla5 from "../../public/charla5.jpg";
 import sun from "../../public/Sun.svg";
 import moon from "../../public/Moon.svg";
+import charla1 from "../../public/images/charla1.png";
+import charla2 from "../../public/images/charla2.png";
+import charla3 from "../../public/images/charla3.png";
+import charla4 from "../../public/images/charla4.png";
+import charla5 from "../../public/images/charla5.jpg";
 
-//Articulos
+
+//Datos
 import articulos from "./articulos.js";
+import workshops from "./workshops";
 
 //DarkMode
 import { ThemeProvider, useTheme } from "next-themes";
@@ -158,85 +160,26 @@ export default function Home({ Component, pageProps }) {
               slideShadows: false,
             }}
           >
-            {/* slide 1 */}
-            <SwiperSlide onClick={() => window.my_modal_1.showModal()}>
-              <a
-                className="cursor-pointer"
-                onClick={() => window.my_modal_1.showModal()}
-              >
-                <div>
-                  <Image
-                    className="xl:max-h-fit md:float-right rounded"
-                    src={charla1}
-                    onClick={() => window.my_modal_1.showModal()}
-                  ></Image>
-                </div>
-              </a>
-            </SwiperSlide>
-
-            {/* slide 2 */}
-            <SwiperSlide onClick={() => window.my_modal_2.showModal()}>
-              <a
-                className="cursor-pointer"
-                onClick={() => window.my_modal_2.showModal()}
-              >
-                <div>
-                  <Image
-                    className="xl:max-h-fit md:float-right rounded"
-                    src={charla2}
-                    onClick={() => window.my_modal_2.showModal()}
-                  ></Image>
-                </div>
-              </a>
-            </SwiperSlide>
-
-            {/* slide 3 */}
-            <SwiperSlide onClick={() => window.my_modal_3.showModal()}>
-              <a
-                className="cursor-pointer"
-                onClick={() => window.my_modal_3.showModal()}
-              >
-                <div>
-                  <Image
-                    className="xl:max-h-fit md:float-right rounded"
-                    src={charla3}
-                    onClick={() => window.my_modal_3.showModal()}
-                  ></Image>
-                </div>
-              </a>
-            </SwiperSlide>
-
-            {/* slide 4 */}
-            <SwiperSlide onClick={() => window.my_modal_4.showModal()}>
-              <a
-                className="cursor-pointer"
-                onClick={() => window.my_modal_4.showModal()}
-              >
-                <div>
-                  <Image
-                    className="xl:max-h-fit md:float-right rounded"
-                    src={charla4}
-                    onClick={() => window.my_modal_4.showModal()}
-                  ></Image>
-                </div>
-              </a>
-            </SwiperSlide>
-
-            {/* slide 5 */}
-            <SwiperSlide onClick={() => window.my_modal_5.showModal()}>
-              <a
-                className="cursor-pointer"
-                onClick={() => window.my_modal_5.showModal()}
-              >
-                <div>
-                  <Image
-                    className="xl:max-h-fit md:float-right rounded"
-                    src={charla5}
-                    onClick={() => window.my_modal_5.showModal()}
-                  ></Image>
-                </div>
-              </a>
-            </SwiperSlide>
+            {/* WORKSHOPS */}
+        
+          {/* MAPEA LOS WORKSHOPS */}
+          {workshops.map((workshop) => (
+            <SwiperSlide onClick={workshop.muestra}>
+            <a
+              className="cursor-pointer"
+              onClick={workshop.muestra}
+            >
+              <div>
+                <img
+                  fill={true}
+                  className="xl:max-h-fit md:float-right rounded"
+                  src={workshop.img}
+                  onClick={workshop.muestra}
+                ></img>
+              </div>
+            </a>
+          </SwiperSlide>
+          ))}
           </Swiper>
 
           {/* Modals */}
