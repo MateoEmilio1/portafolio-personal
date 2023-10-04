@@ -17,6 +17,7 @@ import charla5 from "../../public/images/charla5.jpg";
 //Datos
 import articulos from "./articulos.js";
 import workshops from "./workshops";
+import { Analytics } from '@vercel/analytics/react';
 
 //DarkMode
 import { ThemeProvider, useTheme } from "next-themes";
@@ -466,6 +467,7 @@ export default function Home({ Component, pageProps }) {
           {/* Fin articulos */}
         </div>
       </div>
+      <Analytics />
     </main>
   );
 }
