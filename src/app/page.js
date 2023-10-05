@@ -103,40 +103,41 @@ export default function Home({ Component, pageProps }) {
       </div>
 
       {/* PROYECTOS */}
-      <div className="grid gap-8 min-h-screen md:grid-cols-2 py-52 text-center md:text-center">
-        {/* PARTE IZQ */}
-
-        <div className="sm:items-center">
-          <div className="grid md:justify-center text-black dark:text-white">
-            <h4 className="text-3xl font-bold">Calculadora de Dolares</h4>
-            <p className="text-lg py-10 leading-8">
-              Si vivis en Argentina, la incertidumbre cambiaria hace que saber el valor del dolar sea una necesidad, esta simple
-              pagina te informa el valor actual de los tipos de dolares y
-              calcular la cantidad de dolar que equivalen tus pesos.
-            </p>
-            <div>
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://cuantos-dolares-tengo-app.vercel.app/"
-              >
-                <Image
-                  className="xl:max-h-fit md:float-right rounded shadow-lg"
-                  alt="Logo"
-                  src={proyecto1}
-                ></Image>
-              </a>
-            </div>
-          </div>
-        </div>
+      <div className="grid gap-8 min-h-screen py-52 text-center md:text-center">
         {/* PARTE DERECHA */}
 
-        <div className="py-1s text-black dark:text-white ">
-          <h2 className="text-6xl font-bold">Proyectos</h2>
-          <p className="text-2xl py-10 leading-8">
+        <div className=" text-black dark:text-white  ">
+          <h2 className="text-6xl font-bold pb-10">Proyectos</h2>
+          <p className="text-2xl pb-14 leading-8">
             Proyectos personales en los cuales practico mis habilidades para
             luego aplicarlos en el ambito laboral.
           </p>
+          {/* PROYECTOS */}
+          {/* CALCULADORA DE DOLARES */}
+          <div className="sm:items-center mx-10 md:mx-20 xl:mx-40 border-2 border-gray-400 dark:border-white rounded-md">
+            <div className="grid md:justify-center mx-10 py-10">
+              <h4 className="text-3xl font-bold">Calculadora de Dolares</h4>
+              <p className="text-lg py-10 leading-8">
+                Si vivis en Argentina, la incertidumbre cambiaria hace que saber
+                el valor del dolar sea una necesidad, esta simple pagina te
+                informa el valor actual de los tipos de dolares y calcular la
+                cantidad de dolar que equivalen tus pesos.
+              </p>
+              <div className=" ">
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://cuantos-dolares-tengo-app.vercel.app/"
+                >
+                  <Image
+                    className="xl:max-h-fit md:float-right rounded shadow-lg "
+                    alt="Logo"
+                    src={proyecto1}
+                  ></Image>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Fin PROYECTOS */}
