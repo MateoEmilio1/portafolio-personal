@@ -12,7 +12,7 @@ import charla2 from "../../public/images/charla2.png";
 import charla3 from "../../public/images/charla3.png";
 import charla4 from "../../public/images/charla4.png";
 import charla5 from "../../public/images/charla5.jpg";
-
+import proyecto1 from "../../public/images/screenCuantosDolares.png";
 
 //Datos
 import articulos from "./articulos.js";
@@ -102,11 +102,51 @@ export default function Home({ Component, pageProps }) {
         </div>
       </div>
 
+      {/* PROYECTOS */}
+      <div className="grid gap-8 min-h-screen md:grid-cols-2 py-52 text-center md:text-center">
+        {/* PARTE IZQ */}
+
+        <div className="sm:items-center">
+          <div className="grid md:justify-center text-black dark:text-white">
+            <h4 className="text-3xl font-bold">¿Cuantos dolares tengo?</h4>
+            <p className="text-lg py-10 leading-8">
+              Si vivis en Argentina, la incertidumbre cambiaria hace que saber el valor del dolar sea una necesidad, esta simple
+              pagina te informa el valor actual de los tipos de dolares y
+              calcular la cantidad de dolar que equivalen tus pesos.
+            </p>
+            <div>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://cuantos-dolares-tengo-app.vercel.app/"
+              >
+                <Image
+                  className="xl:max-h-fit md:float-right rounded shadow-lg"
+                  alt="Logo"
+                  src={proyecto1}
+                ></Image>
+              </a>
+            </div>
+          </div>
+        </div>
+        {/* PARTE DERECHA */}
+
+        <div className="py-1s text-black dark:text-white ">
+          <h2 className="text-6xl font-bold">Proyectos</h2>
+          <p className="text-2xl py-10 leading-8">
+            Proyectos personales en los cuales practico mis habilidades para
+            luego aplicarlos en el ambito laboral.
+          </p>
+        </div>
+
+        {/* Fin PROYECTOS */}
+      </div>
+
       {/* SECTOR ABOUT ME */}
 
       <section className="grid gap-8 min-h-screen md:grid-cols-2 text-center md:text-left">
         <div className="py-20 text-black dark:text-white">
-          <h2 className="text-5xl font-bold e">About me</h2>
+          <h2 className="text-5xl font-bold">About me</h2>
           <p className="text-xl py-10 leading-8 ">
             Advanced systems engineering student at UTN FRRO, I began my career
             path within the tech world in the Aurora Latam community (L2 of NEAR
@@ -134,7 +174,7 @@ export default function Home({ Component, pageProps }) {
         </div>
       </section>
 
-      {/* SECTOR COMUNICACION + CARRUSEL */}
+      {/* SECTOR WORKSHOP + CARRUSEL */}
 
       <section className="grid gap-8 min-h-screen md:grid-cols-2 py-52 text-center md:text-center">
         {/* Hacer en este div el Slider. */}
@@ -161,25 +201,22 @@ export default function Home({ Component, pageProps }) {
             }}
           >
             {/* WORKSHOPS */}
-        
-          {/* MAPEA LOS WORKSHOPS */}
-          {workshops.map((workshop) => (
-            <SwiperSlide onClick={workshop.muestra}>
-            <a
-              className="cursor-pointer"
-              onClick={workshop.muestra}
-            >
-              <div>
-                <img
-                  fill={true}
-                  className="xl:max-h-fit md:float-right rounded"
-                  src={workshop.img}
-                  onClick={workshop.muestra}
-                ></img>
-              </div>
-            </a>
-          </SwiperSlide>
-          ))}
+
+            {/* MAPEA LOS WORKSHOPS */}
+            {workshops.map((workshop) => (
+              <SwiperSlide onClick={workshop.muestra}>
+                <a className="cursor-pointer" onClick={workshop.muestra}>
+                  <div>
+                    <img
+                      fill={true}
+                      className="xl:max-h-fit md:float-right rounded"
+                      src={workshop.img}
+                      onClick={workshop.muestra}
+                    ></img>
+                  </div>
+                </a>
+              </SwiperSlide>
+            ))}
           </Swiper>
 
           {/* Modals */}
@@ -199,12 +236,12 @@ export default function Home({ Component, pageProps }) {
                 <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
                   Charla con la comunidad de RosChain "Bases de Solidity", donde
                   vimos una introduccion a la sintaxis del lenguaje para despues
-                  deployar un smart contract en testnet!. <br/><br/> Pero, ¿Que es
-                  Roschain? Es una comunidad en español que se dedica a la
-                  educación y adopción de usuarios en el ecosistema Web3 y
-                  cripto, bajo los valores de la descentralización. <br/> <br/> Para obtener
-                  más información sobre RosChain y cómo está organizado, haga
-                  clic en la imagen.
+                  deployar un smart contract en testnet!. <br />
+                  <br /> Pero, ¿Que es Roschain? Es una comunidad en español que
+                  se dedica a la educación y adopción de usuarios en el
+                  ecosistema Web3 y cripto, bajo los valores de la
+                  descentralización. <br /> <br /> Para obtener más información
+                  sobre RosChain y cómo está organizado, haga clic en la imagen.
                 </p>
                 <div className="flex md:justify-center gap-2">
                   <div>
@@ -391,8 +428,8 @@ export default function Home({ Component, pageProps }) {
               </div>
               <div className="px-8">
                 <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
-                  Workshop sobre como configurar un Nodo de Ethereum utilizando el
-                  software DAppNode desde como bootear el ISO en un pendrive
+                  Workshop sobre como configurar un Nodo de Ethereum utilizando
+                  el software DAppNode desde como bootear el ISO en un pendrive
                   hasta la conexión local, Tandil (Prov. Bs As).
                 </p>
                 <div className="flex md:justify-center gap-2">
@@ -423,8 +460,8 @@ export default function Home({ Component, pageProps }) {
         <div className="py-1s text-black dark:text-white">
           <h2 className="text-4xl font-bold">Workshops</h2>
           <p className="text-xl py-10 leading-8">
-            En este apartado podrás ver las diferentes charlas, presentaciones y talleres (workshops)
-            que tuve la oportunidad de liderar
+            En este apartado podrás ver las diferentes charlas, presentaciones y
+            talleres (workshops) que tuve la oportunidad de liderar
             {/* In this section you can see the different talks/presentations which
             I had the opportunity to lead */}
           </p>
