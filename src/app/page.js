@@ -103,7 +103,7 @@ export default function Home({ Component, pageProps }) {
       </div>
 
       {/* PROYECTOS */}
-      <div className="grid gap-8 min-h-screen py-52 text-center md:text-center">
+      <div className="grid gap-8 min-h-screen py-52 justify-center text-center md:text-center">
         {/* PARTE DERECHA */}
 
         <div className=" text-black dark:text-white  ">
@@ -114,7 +114,7 @@ export default function Home({ Component, pageProps }) {
           </p>
           {/* PROYECTOS */}
           {/* CALCULADORA DE DOLARES */}
-          <div className="sm:items-center mx-10 md:mx-20 xl:mx-40 border-2 border-gray-400 dark:border-white rounded-md">
+          <div className="sm:items-center md:mx-20 xl:mx-40 border-2 border-gray-400 dark:border-white rounded-md">
             <div className="grid md:justify-center mx-10 py-10">
               <h4 className="text-3xl font-bold">Calculadora de Dolares</h4>
               <p className="text-lg py-10 leading-8">
@@ -138,6 +138,8 @@ export default function Home({ Component, pageProps }) {
               </div>
             </div>
           </div>
+          {/* termina calc */}
+          
         </div>
 
         {/* Fin PROYECTOS */}
