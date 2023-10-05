@@ -151,7 +151,7 @@ export default function Home({ Component, pageProps }) {
 
       <section className="grid gap-8 min-h-screen md:grid-cols-2 text-center md:text-left">
         <div className="py-20 text-black dark:text-white">
-          <h2 className="text-5xl font-bold">About me</h2>
+          <h2 className="text-5xl font-bold">Sobre mí</h2>
           <p className="text-xl py-10 leading-8 ">
             Estudiante de Ing. en Sistemas avanzado en UTN FRRO, trabajé como
             Community Builder en{" "}
