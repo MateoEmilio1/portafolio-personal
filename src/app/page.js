@@ -108,7 +108,7 @@ export default function Home({ Component, pageProps }) {
 
         <div className="sm:items-center">
           <div className="grid md:justify-center text-black dark:text-white">
-            <h4 className="text-3xl font-bold">¿Cuantos dolares tengo?</h4>
+            <h4 className="text-3xl font-bold">Calculadora de Dolares</h4>
             <p className="text-lg py-10 leading-8">
               Si vivis en Argentina, la incertidumbre cambiaria hace que saber el valor del dolar sea una necesidad, esta simple
               pagina te informa el valor actual de los tipos de dolares y
