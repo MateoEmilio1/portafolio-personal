@@ -70,14 +70,17 @@ export default function Home({ Component, pageProps }) {
             Mateo Emilio
           </h2>
           <h3 className="text-2xl py-2 font-semibold dark:text-white">
-            Systems engineering student
+            Estudiante de Ing. en Sistemas
+            {/* Systems engineering student */}
           </h3>
           <h3 className="text-xl py-2 font-semibold dark:text-white">
-            Junior Developer
+            Frontend Developer
           </h3>
           <p className="text-md py-5 leading-8 text-gray-800 max-w-xl mx-auto md:text-xl dark:text-white">
-            Blockchain Enthusiast and coding passionate, studying and learning
-            every day what I love, read more about me below!
+            Entusiasta sobre la tecnologia Blockchain, explorando paso a paso el
+            mundo del desarrollo, lee más sobre mí a continuación!
+            {/* Blockchain Enthusiast and coding passionate, studying and learning
+            every day what I love, read more about me below! */}
           </p>
         </div>
 
@@ -139,7 +142,6 @@ export default function Home({ Component, pageProps }) {
             </div>
           </div>
           {/* termina calc */}
-          
         </div>
 
         {/* Fin PROYECTOS */}
@@ -151,7 +153,28 @@ export default function Home({ Component, pageProps }) {
         <div className="py-20 text-black dark:text-white">
           <h2 className="text-5xl font-bold">About me</h2>
           <p className="text-xl py-10 leading-8 ">
-            Advanced systems engineering student at UTN FRRO, I began my career
+            Estudiante de Ing. en Sistemas avanzado en UTN FRRO, trabajé como
+            Community Builder en{" "}
+            <a
+              href="https://twitter.com/auroraisnear"
+              className="text-green-600 font-bold bg-green-200  rounded-md px-2"
+              target="_blank"
+              rel="noopener"
+            >
+              Aurora
+            </a>{" "}
+            (ago/2022 - jul/2023) especificamente en la comunidad de Latam, actualmente estoy
+            trabajando como Desarrollador en{" "}
+            <a
+              href="https://seedlatam.org/"
+              className="text-violet-700 font-bold bg-violet-200 rounded-md px-2"
+              target="_blank"
+              rel="noopener"
+            >
+              Seed Latam
+            </a>
+            &nbsp; desde Julio 2023.
+            {/* Advanced systems engineering student at UTN FRRO, I began my career
             path within the tech world in the Aurora Latam community (L2 of NEAR
             Protocol) doing research and teaching the foundations of the
             blockchain world through courses and talks, there I had the
@@ -159,7 +182,7 @@ export default function Home({ Component, pageProps }) {
             almost 1 year I made the decision to move forward on my path and
             today I am lucky to be currently working as a Developer at SEED
             Latam, the largest community in Latin America of the Ethereum
-            blockchain. PD: I love trekking!
+            blockchain. PD: I love trekking! */}
           </p>
         </div>
 
