@@ -130,7 +130,7 @@ export default function Home({ Component, pageProps }) {
                 <a
                   target="_blank"
                   rel="noopener"
-                  href="https://cuantos-dolares-tengo-app.vercel.app/"
+                  href="https://www.cuantosdolarestengo.com.ar/"
                 >
                   <Image
                     className="xl:max-h-fit md:float-right rounded shadow-lg "
