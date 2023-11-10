@@ -119,25 +119,17 @@ export default function CarruselWorkshops() {
           </button> */}
           </div>
           <div className="px-8">
-            <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              ut enim a leo pulvinar rhoncus. Maecenas risus mauris, interdum eu
-              justo vitae, iaculis scelerisque magna. Vivamus eu tincidunt
-              augue. Sed eleifend eu lacus id porttitor. Proin lorem risus,
-              mollis nec orci et, tincidunt posuere arcu. Vivamus non libero
-              lacinia, ornare sem sed, mattis lorem. Vivamus sed congue neque,
-              non consectetur lectus. Donec ultrices, ante quis maximus
-              dignissim, massa nisl auctor quam, quis molestie turpis odio a
-              urna. Vivamus at libero malesuada, suscipit mauris eget, faucibus
-              arcu. Ut non lorem vel nibh vehicula eleifend sit amet ornare
-              massa.
+            <p className="py-4 min-w-fit w-50  lg:pl-36 md:max-w-4xl  text-lg">
+              Explicacion de como funciona Aurora dentro del ecosistema de NEAR Protocol
+              <br /> <br />{" "}
+              Lima, Perú
             </p>
             <div className="flex md:justify-center gap-2">
               <div>
                 <a
                   target="_blank"
                   rel="noopener"
-                  href="https://twitter.com/0xRoschain"
+                  href="https://twitter.com/auroraisnear"
                 >
                   <Image
                     className="object-contain xl:max-w-5xl md:float-right rounded-lg"
@@ -168,25 +160,17 @@ export default function CarruselWorkshops() {
           </button> */}
           </div>
           <div className="px-8">
-            <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              ut enim a leo pulvinar rhoncus. Maecenas risus mauris, interdum eu
-              justo vitae, iaculis scelerisque magna. Vivamus eu tincidunt
-              augue. Sed eleifend eu lacus id porttitor. Proin lorem risus,
-              mollis nec orci et, tincidunt posuere arcu. Vivamus non libero
-              lacinia, ornare sem sed, mattis lorem. Vivamus sed congue neque,
-              non consectetur lectus. Donec ultrices, ante quis maximus
-              dignissim, massa nisl auctor quam, quis molestie turpis odio a
-              urna. Vivamus at libero malesuada, suscipit mauris eget, faucibus
-              arcu. Ut non lorem vel nibh vehicula eleifend sit amet ornare
-              massa.
+            <p className="py-4 min-w-fit w-50  lg:pl-36 md:max-w-4xl  text-lg">
+              Workshop como deployar smart contracts dentro de Aurora
+              <br /> <br />{" "}
+              Lima, Perú
             </p>
             <div className="flex md:justify-center gap-2">
               <div>
                 <a
                   target="_blank"
                   rel="noopener"
-                  href="https://twitter.com/0xRoschain"
+                  href="https://twitter.com/auroraisnear"
                 >
                   <Image
                     className="object-contain xl:max-w-5xl md:float-right rounded-lg"
@@ -218,24 +202,16 @@ export default function CarruselWorkshops() {
           </div>
           <div className="px-8">
             <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              ut enim a leo pulvinar rhoncus. Maecenas risus mauris, interdum eu
-              justo vitae, iaculis scelerisque magna. Vivamus eu tincidunt
-              augue. Sed eleifend eu lacus id porttitor. Proin lorem risus,
-              mollis nec orci et, tincidunt posuere arcu. Vivamus non libero
-              lacinia, ornare sem sed, mattis lorem. Vivamus sed congue neque,
-              non consectetur lectus. Donec ultrices, ante quis maximus
-              dignissim, massa nisl auctor quam, quis molestie turpis odio a
-              urna. Vivamus at libero malesuada, suscipit mauris eget, faucibus
-              arcu. Ut non lorem vel nibh vehicula eleifend sit amet ornare
-              massa.
+            Workshop como deployar smart contracts dentro de Aurora
+              <br /> <br />{" "}
+              Lima, Perú
             </p>
             <div className="flex md:justify-center gap-2">
               <div>
                 <a
                   target="_blank"
                   rel="noopener"
-                  href="https://twitter.com/0xRoschain"
+                  href="https://twitter.com/auroraisnear"
                 >
                   <Image
                     className="object-contain xl:max-w-5xl md:float-right rounded-lg"
