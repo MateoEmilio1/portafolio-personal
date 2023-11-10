@@ -201,7 +201,7 @@ export default function CarruselWorkshops() {
           </button> */}
           </div>
           <div className="px-8">
-            <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
+            <p className="py-4 min-w-fit w-50  lg:pl-36 md:max-w-4xl  text-lg">
             Workshop como deployar smart contracts dentro de Aurora
               <br /> <br />{" "}
               Lima, Perú
