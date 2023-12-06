@@ -249,7 +249,7 @@ export default function CarruselWorkshops() {
             <p className="py-4 min-w-fit w-50 md: md:max-w-4xl  text-lg">
               Workshop sobre como configurar un Nodo de Ethereum utilizando el
               software DAppNode desde como bootear el ISO en un pendrive hasta
-              la conexión via VPN, poder verlo clickeando en la foto ó 
+              la conexión via VPN, podes verlo clickeando en la foto ó 
               {" "}
             <a
               href="https://www.youtube.com/watch?v=LOELy9Um5ek&t=628s"
